@@ -1,5 +1,5 @@
-from Tkinter import *
-import tkFileDialog
+from tkinter import *
+import tkinter.filedialog
 from controller import inject_msg
 import tkMessageBox
 
@@ -34,7 +34,7 @@ class View:
         inject_button.place(x=190, y=85)
 
     def get_file(self):
-        self.file_path = tkFileDialog.askopenfilename(initialdir="./", title="select")
+        self.file_path = tkinter.filedialog.askopenfilename(initialdir="./", title="select")
         self.file_name.config(text=self.file_path)
 
     def inject(self):
