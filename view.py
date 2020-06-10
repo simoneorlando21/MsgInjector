@@ -1,7 +1,7 @@
 from tkinter import *
 import tkinter.filedialog
 from controller import inject_msg
-import tkMessageBox
+from tkinter import messagebox
 
 class View:
     def __init__(self):
@@ -40,13 +40,13 @@ class View:
     def inject(self):
         try:
             inject_msg(self.file_path, self.entry.get())
-            tkMessageBox.showinfo("Success box", "Message injected correctly!")
+            messagebox.showinfo("Success box", "Message injected correctly!")
             self.file_name.config(text="")
             self.entry.delete(0,'end')
             self.file_path= ""
             self.message= ""
         except:
-            tkMessageBox.showerror("Error box", "Missing parametres!")
+            messagebox.showerror("Error box", "Missing parametres!")
             self.file_name.config(text="")
             self.entry.delete(0, 'end')
 
