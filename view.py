@@ -43,6 +43,8 @@ class View:
             tkMessageBox.showinfo("Success box", "Message injected correctly!")
             self.file_name.config(text="")
             self.entry.delete(0,'end')
+            self.file_path= ""
+            self.message= ""
         except:
             tkMessageBox.showerror("Error box", "Missing parametres!")
             self.file_name.config(text="")
