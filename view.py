@@ -38,13 +38,13 @@ class View:
         self.file_name.config(text=self.file_path)
 
     def inject(self):
-        #try:
+        try:
             print(self.file_path)
             inject_msg(self.file_path, self.entry.get())
             messagebox.showinfo("Success box", "Message injected correctly!")
-        #except:
-         #   messagebox.showerror("Error box", "Missing parametres!")
-        #finally:
+        except:
+            messagebox.showerror("Error box", "Missing parametres!")
+        finally:
             self.file_name.config(text="")
             self.entry.delete(0, 'end')
             self.file_path = ""
