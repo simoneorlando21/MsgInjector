@@ -24,7 +24,7 @@ class View:
         self.file_name.place(x=210, y=10)
 
     def init_textfield(self):
-        self.entry = Entry(self.master, width=45, textvariable=self.message)
+        self.entry = Entry(self.master, width=40, textvariable=self.message)
         self.entry.place(x=100, y=50)
 
     def init_buttons(self):
